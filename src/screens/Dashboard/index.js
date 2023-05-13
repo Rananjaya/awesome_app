@@ -60,7 +60,7 @@ const index = () => {
       </View>
       <View
         style={{
-          alignItems: 'center',
+          alignItems: 'center', 
         }}>
         {/* footer */}
         <Footer />
