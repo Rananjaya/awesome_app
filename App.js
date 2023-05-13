@@ -3,6 +3,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import LoginScreen from './src/screens/Login';
+import DashboardScreen from './src/screens/Dashboard';
 import 'react-native-gesture-handler';
 const Stack = createStackNavigator();
 const App = () => {
@@ -12,7 +13,8 @@ const App = () => {
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="dashboardScreen" component={DashboardScreen} />
+        <Stack.Screen name="loginScreen" component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
