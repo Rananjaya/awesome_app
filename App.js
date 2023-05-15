@@ -5,9 +5,12 @@ import {createStackNavigator} from '@react-navigation/stack';
 import LoginScreen from './src/screens/Login';
 import DashboardScreen from './src/screens/Dashboard';
 import 'react-native-gesture-handler';
+import { store } from './src/redux/store'
+import { Provider } from 'react-redux'
 const Stack = createStackNavigator();
 const App = () => {
   return (
+    <Provider store={store}>
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
@@ -18,6 +21,8 @@ const App = () => {
         
       </Stack.Navigator>
     </NavigationContainer>
+    </Provider>
+
   );
 };
 
