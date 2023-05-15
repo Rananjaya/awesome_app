@@ -9,7 +9,7 @@ const dashboardMiddelBox = ({
 }) => {
   return (
     <View style={styles.mainWrapper}>
-        <Text style={{color : COLORS.White, fontWeight : "bold", fontSize : 15}}>{content}</Text>
+        <Text style={styles.TextStyle}>{content}</Text>
         <TouchableOpacity>
         <View style={{}}>
              <LogoutButton logoutText={'Logout'}/>
@@ -31,5 +31,6 @@ const styles = StyleSheet.create({
         padding : 25
         // justifyContent : "center", 
         // alignItems : "center"
-    }
+    },
+    TextStyle : {color : COLORS.White, fontWeight : "bold", fontSize : 15}
 })

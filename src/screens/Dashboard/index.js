@@ -4,21 +4,16 @@ import COLORS from '../../const/colos';
 import Header from '../../components/MainHeader';
 import Footer from '../../components/Footer';
 import DashboardMiddelBox from '../../components/dashboardMiddelBox';
-import LogoutButton from '../../components/logoutButton';
+
 const index = () => {
   return (
     <SafeAreaView style={styles.MainWrpapper}>
-      <View style={{flex: 1}}>
+      <View style={styles.secondCon}>
         {/* header */}
         <View style={styles.HeaderWrapper}>
           <Header headerText={'Awesome'} headerText2={'App'} />
         </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
+        <View style={styles.imageCon}>
           <View style={styles.ImageWrapper}>
             {/* avatar */}
             <Image
@@ -47,9 +42,9 @@ const index = () => {
           </View>
         </View>
 
-        <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
+        <View style={styles.contentStyle}>
           {/* middel Box */}
-          <View style={{flex: 1}}>
+          <View style={styles.middelCon}>
             <DashboardMiddelBox
               content={
                 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
@@ -60,10 +55,15 @@ const index = () => {
       </View>
       <View
         style={{
-          alignItems: 'center', 
+          alignItems: 'center',
         }}>
         {/* footer */}
-        <Footer />
+
+        <Footer
+          footerHeader={'Awesome App Footer'}
+          footerSecondHeader={'Copy Rights'}
+          FooterLink={'Link to web'}
+        />
       </View>
     </SafeAreaView>
   );
@@ -103,4 +103,12 @@ const styles = StyleSheet.create({
   dashbordText: {
     color: COLORS.black,
   },
+  secondCon: {flex: 1},
+  imageCon: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  contentStyle: {justifyContent: 'center', alignItems: 'center', flex: 1},
+  middelCon: {flex: 1},
 });

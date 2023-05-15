@@ -4,16 +4,7 @@ import COLORS from '../const/colos'
 
 const logoutButton = ({logoutText}) => {
   return (
-    <TouchableOpacity style={{
-        height : 45,
-        width : 200,
-        backgroundColor : "rgb(118,188,33)",
-        borderRadius: 10,
-        elevation : 10,
-        justifyContent : "center", 
-        alignItems : "center",
-        marginTop : 10
-    }}>
+    <TouchableOpacity style={styles.logoutButtonMain}>
      <Text style={styles.logoutText}>
         {logoutText}
      </Text>
@@ -28,6 +19,15 @@ const styles = StyleSheet.create({
         color : COLORS.White,
         fontSize : 20,
         fontWeight : "bold",
-       
-    }
+    },
+    logoutButtonMain : {
+      height : 45,
+      width : 200,
+      backgroundColor : "rgb(118,188,33)",
+      borderRadius: 10,
+      elevation : 10,
+      justifyContent : "center", 
+      alignItems : "center",
+      marginTop : 10
+  }
 })

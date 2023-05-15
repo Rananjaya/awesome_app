@@ -19,22 +19,14 @@ const LoginBox = () => {
       {/* TextInputs */}
       <LoginInputs />
       <PasswordBox />
-      <View
-        style={{
-          marginTop: 20,
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}>
+      <View style={styles.instaMain}>
         <InstaLogin />
         <TouchableOpacity>
-          <Text style={{color: '#000', marginLeft: 10}}>
-            Login with Instagram
-          </Text>
+          <Text style={styles.instaText}>Login with Instagram</Text>
         </TouchableOpacity>
       </View>
 
-      <LoginButton />
+      <LoginButton buttonText={'Login'} />
     </View>
   );
 };
@@ -52,4 +44,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  instaMain: {
+    marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  instaText: {color: '#000', marginLeft: 10},
 });

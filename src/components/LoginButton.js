@@ -2,10 +2,12 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import COLORS from '../const/colos';
 
-const LoginButton = () => {
+const LoginButton = ({
+  buttonText
+}) => {
   return (
     <TouchableOpacity style={styles.mainButton}>
-      <Text style={styles.LoginText}>Login</Text>
+      <Text style={styles.LoginText}>{buttonText}</Text>
     </TouchableOpacity>
   );
 };

@@ -9,7 +9,7 @@ import Footer from '../../components/Footer';
 const loginScreen = () => {
   return (
     <SafeAreaView style={styles.mainWrapper}>
-      <View style={{flex: 1}}>
+      <View style={styles.SecondWrapper}>
         {/* header */}
         <View style={styles.HeaderWrapper}>
           <Header headerText={'Awesome'} headerText2={'App'} />
@@ -19,7 +19,7 @@ const loginScreen = () => {
           <Image style={styles.LogoStyle} source={Logo} />
         </View>
 
-        <View style={{justifyContent: 'center', alignItems: 'center'}}>
+        <View style={styles.middelCon}>
           {/* Login contioner */}
           <LoginBox />
         </View>
@@ -29,7 +29,7 @@ const loginScreen = () => {
           alignItems: 'center',
         }}>
         {/* footer */}
-        <Footer />
+        <Footer footerHeader={'Awesome App Footer'}  footerSecondHeader={'Copy Rights'} FooterLink={'Link to web'}/>
       </View>
     </SafeAreaView>
   );
@@ -38,6 +38,7 @@ const loginScreen = () => {
 export default loginScreen;
 
 const styles = StyleSheet.create({
+  SecondWrapper : {flex: 1},
   mainWrapper: {
     flex: 1,
     backgroundColor: COLORS.BackgroundLogin,
@@ -55,4 +56,5 @@ const styles = StyleSheet.create({
     height: 100,
     width: 100,
   },
+  middelCon : {justifyContent: 'center', alignItems: 'center'}
 });
